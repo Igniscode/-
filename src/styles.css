@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Pretendard:wght@300;400;700&family=JetBrains+Mono:wght@400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    font-family: 'Pretendard', sans-serif;
+    background-color: #ffffff;
+    color: #1e293b;
+    line-height: 1.7;
+    overflow-x: hidden;
+}
+
+#app {
+    min-height: 100vh;
+}
+
+.font-mono {
+    font-family: 'JetBrains Mono', monospace;
+}
+
+.section-active {
+    display: block;
+    animation: fadeIn 0.5s ease-out forwards;
+}
+
+.section-hidden {
+    display: none;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.interactive-card {
+    transition: all 0.3s;
+    border: 1px solid #e2e8f0;
+    cursor: pointer;
+}
+
+.interactive-card:hover {
+    border-color: #6366f1;
+    background: #f8fafc;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.bit-switch {
+    transition: all 0.2s;
+    cursor: pointer;
+    border-radius: 12px;
+}
+
+.bit-switch:hover {
+    background: #f1f5f9;
+}
+
+.yy-text-block {
+    display: none;
+    animation: fadeIn 0.4s ease-out;
+}
+
+.yy-text-active {
+    display: block;
+}
+
+.fade-in-content {
+    animation: fadeIn 0.3s ease-out;
+}
